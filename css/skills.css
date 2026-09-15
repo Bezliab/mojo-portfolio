@@ -1,0 +1,32 @@
+/* ===================================================
+   Skills — styles
+   =================================================== */
+/* ============ SKILLS ============ */
+.skills-layout{
+  display:grid;
+  grid-template-columns:0.7fr 1.3fr;
+  gap:60px;
+  align-items:start;
+}
+.skills-intro p{ color:var(--ink-soft); font-size:1.02rem; line-height:1.75; margin-bottom:24px; }
+.skills-grid{
+  display:flex; flex-wrap:wrap; gap:12px;
+}
+.skill-chip{
+  display:inline-flex; align-items:center; gap:9px;
+  padding:12px 20px;
+  border-radius:100px;
+  background:var(--white);
+  border:1px solid var(--line);
+  font-size:0.92rem; font-weight:500;
+  transition:border-color .25s ease, background .25s ease, transform .25s ease;
+}
+.skill-chip:hover{ border-color:var(--berry); background:var(--linen); transform:translateY(-2px); }
+.skill-chip .chip-dot{ width:7px; height:7px; border-radius:50%; background:var(--gold); flex:none; }
+.skills-groups{ margin-top:8px; }
+.skills-group-label{ font-family:var(--serif); font-style:italic; color:var(--berry); font-size:1rem; margin:26px 0 14px; }
+.skills-group-label:first-child{ margin-top:0; }
+@media (max-width:900px){
+  .skills-layout{ grid-template-columns:1fr; gap:32px; }
+}
+

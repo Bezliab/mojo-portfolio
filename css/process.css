@@ -1,0 +1,33 @@
+/* ===================================================
+   Content Creation Process — styles
+   =================================================== */
+/* ============ PROCESS ============ */
+.process-track{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:0;
+  position:relative;
+}
+.process-track::before{
+  content:"";
+  position:absolute; top:26px; left:0; right:0; height:1px;
+  background:var(--line);
+}
+.process-step{ position:relative; padding:0 18px 0 0; }
+.process-num{
+  width:52px; height:52px; border-radius:50%;
+  background:var(--ivory); border:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--serif); font-style:italic; color:var(--berry); font-size:1.15rem;
+  position:relative; z-index:1;
+  margin-bottom:22px;
+  transition:background .3s ease, border-color .3s ease, color .3s ease;
+}
+.process-step:hover .process-num{ background:var(--berry); border-color:var(--berry); color:var(--white); }
+.process-step h3{ font-size:1.15rem; margin-bottom:10px; }
+.process-step p{ font-size:0.88rem; color:var(--ink-soft); line-height:1.6; padding-right:8px; }
+@media (max-width:900px){
+  .process-track{ grid-template-columns:1fr; gap:36px; }
+  .process-track::before{ display:none; }
+}
+
