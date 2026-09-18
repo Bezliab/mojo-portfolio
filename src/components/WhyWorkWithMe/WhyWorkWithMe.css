@@ -1,0 +1,25 @@
+/* ============ WHY WORK WITH ME ============ */
+.why-layout{
+  display:grid;
+  grid-template-columns:0.9fr 1.1fr;
+  gap:60px;
+  align-items:center;
+}
+.why-pull{
+  background:var(--ink);
+  color:var(--white);
+  border-radius:var(--radius-lg);
+  padding:48px 38px;
+}
+.why-pull p{ font-family:var(--serif); font-size:1.5rem; line-height:1.4; font-style:italic; }
+.why-pull span{ display:block; margin-top:24px; font-size:0.85rem; color:rgba(255,255,255,0.65); font-style:normal; font-family:var(--sans); }
+.why-heading{ font-size:2rem; margin-bottom:28px; max-width:20ch; }
+.why-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
+.why-item{ display:flex; gap:14px; padding:18px 4px; border-bottom:1px solid var(--line); }
+.why-item svg{ flex:none; color:var(--berry); margin-top:2px; }
+.why-item strong{ display:block; font-size:0.98rem; margin-bottom:4px; }
+.why-item span{ font-size:0.84rem; color:var(--ink-faint); line-height:1.5; }
+@media (max-width:960px){
+  .why-layout{ grid-template-columns:1fr; }
+  .why-grid{ grid-template-columns:1fr; }
+}

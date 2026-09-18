@@ -1,0 +1,18 @@
+/* ============ RESUME ============ */
+.resume-card{
+  background:var(--berry);
+  border-radius:var(--radius-lg);
+  padding:56px;
+  display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;
+  color:var(--white);
+  position:relative; overflow:hidden;
+}
+.resume-card::before{
+  content:""; position:absolute; inset:0;
+  background:radial-gradient(circle at 85% 20%, rgba(255,255,255,0.08), transparent 50%);
+}
+.resume-text{ position:relative; z-index:1; max-width:480px; }
+.resume-text h2{ color:var(--white); font-size:2rem; margin-bottom:14px; }
+.resume-text p{ color:rgba(255,255,255,0.78); font-size:1rem; line-height:1.65; }
+.resume-actions{ position:relative; z-index:1; display:flex; flex-direction:column; gap:12px; align-items:flex-start; }
+.resume-actions small{ color:rgba(255,255,255,0.6); font-size:0.76rem; }

@@ -1,6 +1,3 @@
-/* ===================================================
-   Home / hero — styles
-   =================================================== */
 /* ============ HERO ============ */
 .hero{
   padding:180px 0 110px;
@@ -16,6 +13,7 @@
 .hero-label{
   font-family:var(--serif); font-style:italic; color:var(--berry);
   font-size:1.05rem; margin-bottom:22px;
+  display:block;
 }
 .hero h1{
   font-size:clamp(2.6rem, 5.2vw, 4.4rem);
@@ -100,3 +98,21 @@
   .hero-photo{ max-width:320px; margin:0 auto 8px; }
 }
 
+/* Staggered one-time entrance for the hero's elements */
+.hero .reveal{
+  opacity:0;
+  transform:translateY(16px);
+  transition:opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1);
+}
+.hero .reveal.is-visible{ opacity:1; transform:translateY(0); }
+.hero .hero-label.reveal{ transition-delay:0ms; }
+.hero h1.reveal{ transition-delay:90ms; }
+.hero .hero-sub.reveal{ transition-delay:180ms; }
+.hero .hero-services-line.reveal{ transition-delay:270ms; }
+.hero .hero-actions.reveal{ transition-delay:360ms; }
+.hero .hero-meta.reveal{ transition-delay:450ms; }
+.hero .hero-photo-wrap.reveal{ transition-delay:540ms; }
+
+@media (prefers-reduced-motion: reduce){
+  .hero .reveal{ opacity:1; transform:none; transition:none; }
+}
