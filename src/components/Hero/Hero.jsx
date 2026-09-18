@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
-import './Hero.css';
+import { useEffect, useState } from "react";
+import "./Hero.css";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
@@ -10,7 +10,7 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, []);
 
-  const revealClass = loaded ? 'reveal is-visible' : 'reveal';
+  const revealClass = loaded ? "reveal is-visible" : "reveal";
 
   return (
     <section className="hero" id="top">
@@ -19,11 +19,14 @@ export default function Hero() {
           <span className={`hero-label ${revealClass}`}>
             Virtual Assistant, Content Creator &amp; Social Media Manager
           </span>
-          <h1 className={revealClass}>Helping Brands Stay Organized, Visible &amp; Connected.</h1>
+          <h1 className={revealClass}>
+            Helping Brands Stay Organized, Visible &amp; Connected.
+          </h1>
           <p className={`hero-sub ${revealClass}`}>
-            I partner with entrepreneurs and growing businesses to handle the details that keep
-            things running, build a social presence people actually stop to look at, and create
-            content that turns followers into customers.
+            I partner with entrepreneurs and growing businesses to handle the
+            details that keep things running, build a social presence people
+            actually stop to look at, and create content that turns followers
+            into customers.
           </p>
           <p className={`hero-services-line ${revealClass}`}>
             Virtual Assistance. Content Creation. Social Media Management.
@@ -38,15 +41,15 @@ export default function Hero() {
           </div>
           <div className={`hero-meta ${revealClass}`}>
             <div>
-              <strong>3+</strong>
+              <strong>1+</strong>
               <span>Years supporting brands online</span>
             </div>
             <div>
-              <strong>40+</strong>
+              <strong>5+</strong>
               <span>Projects &amp; campaigns delivered</span>
             </div>
             <div>
-              <strong>98%</strong>
+              <strong>95%</strong>
               <span>Client satisfaction rate</span>
             </div>
           </div>
@@ -54,8 +57,7 @@ export default function Hero() {
         <div className={`hero-photo-wrap ${revealClass}`}>
           {/* Replace this block with: <img src="your-photo.jpg" alt="Mojisola Esther" /> inside a div.hero-photo */}
           <div className="hero-photo">
-            <div className="hero-photo-frame"></div>
-            <span className="hero-photo-monogram">ME</span>
+            <img src="/img/IMG_3128.PNG" alt="Mojisola Esther" />
             <div className="hero-photo-tag">
               <span className="dot"></span>
               Currently booking new clients
