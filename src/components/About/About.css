@@ -16,6 +16,7 @@
   padding: 44px 36px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 6.4rem;
 }
 .about-card::before {
   content: "\201C";

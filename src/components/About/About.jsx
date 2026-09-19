@@ -146,6 +146,15 @@ export default function About() {
             </p>
             <cite>— Mojisola Esther</cite>
           </div>
+          <div className="about-card">
+            <p>
+              You focus on building your business; we’ll help you manage,
+              create, and show up online. Taking the stress off your plate,
+              bringing your ideas to life, and helping your brand stay
+              consistent, creative, professional, and unforgettable.
+            </p>
+            <cite>— Mojisola Esther</cite>
+          </div>
         </div>
         <div className="about-copy">
           <span className="section-tag">About Me</span>
