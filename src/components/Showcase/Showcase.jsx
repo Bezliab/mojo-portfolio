@@ -1,8 +1,16 @@
-import './Showcase.css';
+import "./Showcase.css";
 
 // Weekly template (Mon–Sun) used to build the sample month calendar.
 // Sunday is a rest day with no scheduled post.
-const WEEK_PATTERN = ['gold', 'berry-light', 'gold', 'ink-soft', 'berry', 'berry-light', null];
+const WEEK_PATTERN = [
+  "gold",
+  "berry-light",
+  "gold",
+  "ink-soft",
+  "berry",
+  "berry-light",
+  null,
+];
 const DAYS_IN_MOCK_MONTH = 28;
 const CALENDAR_DAYS = Array.from({ length: DAYS_IN_MOCK_MONTH }, (_, i) => {
   const day = i + 1;
@@ -10,83 +18,101 @@ const CALENDAR_DAYS = Array.from({ length: DAYS_IN_MOCK_MONTH }, (_, i) => {
 });
 
 const LEGEND = [
-  { color: 'gold', label: 'Educational Tips' },
-  { color: 'berry-light', label: 'Behind-the-Scenes' },
-  { color: 'berry', label: 'Promotional' },
-  { color: 'ink-soft', label: 'Community & Engagement' },
+  { color: "gold", label: "Educational Tips" },
+  { color: "berry-light", label: "Behind-the-Scenes" },
+  { color: "berry", label: "Promotional" },
+  { color: "ink-soft", label: "Community & Engagement" },
 ];
 
 const PILLARS = [
   {
-    color: 'gold',
-    title: 'Educational Tips',
-    description: 'Quick, useful tips that position the brand as the go-to expert in its space.',
+    color: "gold",
+    title: "Educational Tips",
+    description:
+      "Quick, useful tips that position the brand as the go-to expert in its space.",
   },
   {
-    color: 'berry-light',
-    title: 'Behind-the-Scenes',
-    description: 'Process, workspace and personality content that builds familiarity and trust.',
+    color: "berry-light",
+    title: "Behind-the-Scenes",
+    description:
+      "Process, workspace and personality content that builds familiarity and trust.",
   },
   {
-    color: 'berry',
-    title: 'Promotional',
-    description: 'Product, service and offer content, always tied back to a clear call-to-action.',
+    color: "berry",
+    title: "Promotional",
+    description:
+      "Product, service and offer content, always tied back to a clear call-to-action.",
   },
   {
-    color: 'ink-soft',
-    title: 'Community & Engagement',
-    description: 'Questions, polls and client wins that invite followers to comment and share.',
+    color: "ink-soft",
+    title: "Community & Engagement",
+    description:
+      "Questions, polls and client wins that invite followers to comment and share.",
   },
 ];
 
 const CAPTIONS = [
   {
-    platform: 'Instagram — Educational Post',
-    text: 'Three things to check before you hit "post" this week: your caption has a clear next step, your grid still feels cohesive, and your hashtags actually match your audience. Small checks, better results.',
-    hashtags: '#smallbusinesstips #contentplanning #socialmediastrategy',
+    platform: "Instagram — Educational Post",
+    text: 'Three things to check before you hit "post" this week: Your caption should have a clear message, your visuals should match your brand, and your call-to-action should tell your audience what to do next. Consistent, intentional content makes your brand easier to recognize and trust.',
+    hashtags:
+      "#ContentStrategy #SocialMediaTips #SmallBusinessTips #contentplanning",
   },
   {
-    platform: 'Instagram — Promotional Post',
-    text: "Spots for [Service/Product Name] are open for [Month] — and they tend to go quickly. If you've been waiting for a sign, here it is. Tap the link in bio to get started.",
-    hashtags: '#nowbooking #smallbusinessowner #supportlocal',
+    platform: "Instagram — Promotional Post",
+    text: "Ready to give your brand a stronger online presence? — From content planning and creative direction to social media management, I help brands create content that looks professional, connects with their audience, and supports their business goals.",
+    textCTA: "Let's work together.",
+    hashtags: "#SocialMediaManagement #DigitalMarketing #BrandGrowth",
   },
 ];
 
 const ENGAGEMENT_APPROACH = [
-  'Reply to every comment and DM within 24 hours',
-  'Spend 15 minutes daily engaging with target accounts',
-  'Use polls, questions and "this or that" prompts weekly',
-  'Re-share and thank followers who tag the brand',
-  'Track which post formats spark the most conversation',
+  "Reply to every comment and DM within 24 hours",
+  "Spend 15 minutes daily engaging with target accounts",
+  // 'Use polls, questions and "this or that" prompts weekly',
+  "Re-share and thank followers who tag the brand",
+  "Track which post formats spark the most conversation",
 ];
 
 const HASHTAG_GROUPS = [
-  { label: 'Branded:', value: '#[BrandName]Client, #[BrandName]Community' },
-  { label: 'Niche:', value: '#[industry]tips, #[industry]business' },
-  { label: 'Broad reach:', value: '#smallbusiness, #entrepreneurlife' },
-  { label: 'Local/community:', value: '#[city]business, #shoplocal' },
+  { label: "Branded:", value: "#MojisolaEsther, #MojoVisuals" },
+  {
+    label: "Niche:",
+    value: "#SocialMediaManager, #ContentStrategy, #DigitalMarketing",
+  },
+  {
+    label: "Broad reach:",
+    value: "#SocialMedia, #ContentCreation, #SmallBusiness",
+  },
+  {
+    label: "Local/community:",
+    value: "#NigerianBusiness, #Business, #Entrepreneurs",
+  },
 ];
 
 const STATS = [
-  { value: '48.2K', label: 'Accounts reached' },
-  { value: '6.4%', label: 'Average engagement rate' },
-  { value: '+920', label: 'New followers this month' },
-  { value: '3.1K', label: 'Saves on top-performing post' },
+  { value: "700+", label: "Accounts reached" },
+  { value: "48%", label: "Average engagement rate" },
+  { value: "+600", label: "New followers this month" },
+  { value: "1.2K", label: "Views on top-performing post" },
 ];
 
-const DAY_LABELS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+const DAY_LABELS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 export default function Showcase() {
   return (
     <section className="section" id="showcase">
       <div className="wrap">
         <div className="section-head">
-          <span className="section-tag">Social Media Management, In Practice</span>
+          <span className="section-tag">
+            Social Media Management, In Practice
+          </span>
           <h2>A behind-the-scenes look at how I manage a brand's presence.</h2>
           <p>
-            This is a sample of the systems and thinking I bring to every account — a real
-            content calendar, defined content pillars, caption examples and a reporting rhythm,
-            all using placeholder data for a fictional client brand.
+            This is a sample of the systems and thinking I bring to every
+            account — a real content calendar, defined content pillars, caption
+            examples and a reporting rhythm, all using placeholder data for a
+            fictional client brand.
           </p>
         </div>
 
@@ -109,14 +135,22 @@ export default function Showcase() {
               {CALENDAR_DAYS.map(({ day, color }) => (
                 <div className="calendar-cell" key={day}>
                   {day}
-                  {color && <span className="pillar-dot" style={{ background: `var(--${color})` }}></span>}
+                  {color && (
+                    <span
+                      className="pillar-dot"
+                      style={{ background: `var(--${color})` }}
+                    ></span>
+                  )}
                 </div>
               ))}
             </div>
             <div className="legend">
               {LEGEND.map((item) => (
                 <div className="legend-item" key={item.label}>
-                  <span className="legend-dot" style={{ background: `var(--${item.color})` }}></span>
+                  <span
+                    className="legend-dot"
+                    style={{ background: `var(--${item.color})` }}
+                  ></span>
                   {item.label}
                 </div>
               ))}
@@ -132,7 +166,10 @@ export default function Showcase() {
           <div className="pillars-grid">
             {PILLARS.map((pillar) => (
               <div className="pillar-card" key={pillar.title}>
-                <div className="pillar-swatch" style={{ background: `var(--${pillar.color})` }}></div>
+                <div
+                  className="pillar-swatch"
+                  style={{ background: `var(--${pillar.color})` }}
+                ></div>
                 <h4>{pillar.title}</h4>
                 <p>{pillar.description}</p>
               </div>
@@ -185,7 +222,7 @@ export default function Showcase() {
 
         <div className="showcase-block">
           <div className="showcase-block-head">
-            <h3>Sample Analytics &amp; Reporting</h3>
+            <h3>Sample Monthly Report</h3>
             <p>Placeholder figures — monthly report format</p>
           </div>
           <div className="stats-row">

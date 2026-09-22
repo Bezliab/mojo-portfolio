@@ -1,24 +1,47 @@
-import './Skills.css';
+import "./Skills.css";
 
 const SKILL_GROUPS = [
   {
-    label: 'Platforms & Software',
-    items: ['Canva', 'Google Workspace', 'Microsoft Office', 'Notion', 'Slack', 'Trello', 'Asana'],
-  },
-  {
-    label: 'Social Platforms',
-    items: ['Instagram', 'Facebook', 'TikTok', 'LinkedIn', 'Pinterest', 'X (Twitter)'],
-  },
-  {
-    label: 'Core Skills',
+    label: "Platforms & Software",
     items: [
-      'Content Planning',
-      'Copywriting',
-      'Email Management',
-      'Calendar Management',
-      'Research',
-      'Communication',
-      'Project Coordination',
+      "Canva",
+      "Google Workspace",
+      "Microsoft Office",
+      "Notion",
+      "Slack",
+      "Trello",
+      "Asana",
+      "Capcut",
+      "ChatGPT",
+      "Calendly",
+      "Claude",
+      "HubSpot",
+    ],
+  },
+  {
+    label: "Social Platforms",
+    items: [
+      "Instagram",
+      "Facebook",
+      "TikTok",
+      "LinkedIn",
+      "Pinterest",
+      "X (Twitter)",
+    ],
+  },
+  {
+    label: "Core Skills",
+    items: [
+      "Content Planning",
+      "Content Creation",
+      "Copywriting",
+      "Email Management",
+      "Calendar Management",
+      "Research",
+      "Communication",
+      "Project Coordination",
+      "Video Editing",
+      "",
     ],
   },
 ];
@@ -31,8 +54,9 @@ export default function Skills() {
           <span className="section-tag">Tools &amp; Skills</span>
           <h2>Fluent in the tools that keep a business moving.</h2>
           <p>
-            I work across the platforms most small businesses and teams already use, so
-            onboarding me is quick — no long learning curve, no starting from scratch.
+            I work across the platforms most small businesses and teams already
+            use, so onboarding me is quick — no long learning curve, no starting
+            from scratch.
           </p>
         </div>
         <div className="skills-groups">
