@@ -92,7 +92,7 @@ const HASHTAG_GROUPS = [
 
 const STATS = [
   { value: "700+", label: "Accounts reached" },
-  { value: "48%", label: "Average engagement rate" },
+  { value: "52%", label: "Average engagement rate" },
   { value: "+600", label: "New followers this month" },
   { value: "1.2K", label: "Views on top-performing post" },
 ];
