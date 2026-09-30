@@ -57,7 +57,7 @@ export default function Hero() {
         <div className={`hero-photo-wrap ${revealClass}`}>
           {/* Replace this block with: <img src="your-photo.jpg" alt="Mojisola Esther" /> inside a div.hero-photo */}
           <div className="hero-photo">
-            <img src="./img/IMG_3128.PNG" alt="Mojisola Esther" />
+            <img src="/img/IMG_3128.PNG" alt="Mojisola Esther" />
             <div className="hero-photo-tag">
               <span className="dot"></span>
               Currently booking new clients
