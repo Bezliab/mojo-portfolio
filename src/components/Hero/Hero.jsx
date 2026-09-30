@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Hero.css";
-import heroPhoto from "./img/IMG_3128.PNG";
+import heroPhoto from "./../img/IMG_3128.PNG";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
