@@ -103,6 +103,13 @@
       transparent 2px 26px
     );
 }
+.hero-photo-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .hero-photo-monogram {
   font-family: var(--serif);
   font-style: italic;
