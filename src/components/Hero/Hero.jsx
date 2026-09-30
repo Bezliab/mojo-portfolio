@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Hero.css";
-import heroPhoto from "./your-photo.jpg";
+import heroPhoto from "./photo.jpg";
 
 export default function Hero() {
   const [loaded, setLoaded] = useState(false);
@@ -56,7 +56,6 @@ export default function Hero() {
           </div>
         </div>
         <div className={`hero-photo-wrap ${revealClass}`}>
-          {/* Replace this block with: <img src="your-photo.jpg" alt="Mojisola Esther" /> inside a div.hero-photo */}
           <div className="hero-photo">
             <img
               src={heroPhoto}
