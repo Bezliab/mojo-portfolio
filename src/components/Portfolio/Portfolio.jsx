@@ -26,21 +26,21 @@ const PROJECTS = [
     role: "Content Creator & Designer",
     tools: "Canva, Instagram Planner",
     result: "+43% profile visits in 60 days",
-    icon: (
-      // <>
-      //   <rect
-      //     x="3"
-      //     y="3"
-      //     width="18"
-      //     height="18"
-      //     rx="4"
-      //     stroke="currentColor"
-      //     strokeWidth="1.4"
-      //   />
-      //   <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.4" />
-      //   <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
-      // </>
-    ),
+    // icon: (
+    //   // <>
+    //   //   <rect
+    //   //     x="3"
+    //   //     y="3"
+    //   //     width="18"
+    //   //     height="18"
+    //   //     rx="4"
+    //   //     stroke="currentColor"
+    //   //     strokeWidth="1.4"
+    //   //   />
+    //   //   <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.4" />
+    //   //   <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+    //   // </>
+    // ),
   },
   {
     category: "calendar",
@@ -52,25 +52,25 @@ const PROJECTS = [
     role: "Social Media Manager",
     tools: "Notion, Google Sheets",
     result: "Increase followers and engagement by 32% in 30 days",
-    icon: (
-      // <>
-      //   <rect
-      //     x="3"
-      //     y="4"
-      //     width="18"
-      //     height="17"
-      //     rx="2"
-      //     stroke="currentColor"
-      //     strokeWidth="1.4"
-      //   />
-      //   <path
-      //     d="M3 9h18M8 3v3M16 3v3"
-      //     stroke="currentColor"
-      //     strokeWidth="1.4"
-      //     strokeLinecap="round"
-      //   />
-      // </>
-    ),
+    // icon: (
+    //   // <>
+    //   //   <rect
+    //   //     x="3"
+    //   //     y="4"
+    //   //     width="18"
+    //   //     height="17"
+    //   //     rx="2"
+    //   //     stroke="currentColor"
+    //   //     strokeWidth="1.4"
+    //   //   />
+    //   //   <path
+    //   //     d="M3 9h18M8 3v3M16 3v3"
+    //   //     stroke="currentColor"
+    //   //     strokeWidth="1.4"
+    //   //     strokeLinecap="round"
+    //   //   />
+    //   // </>
+    // ),
   },
   {
     category: "social",
@@ -82,20 +82,20 @@ const PROJECTS = [
     role: "Content Creator",
     tools: "CapCut, Canva",
     result: "4 Reels crossed 5K views",
-    icon: (
-      // <>
-      //   <rect
-      //     x="4"
-      //     y="3"
-      //     width="16"
-      //     height="18"
-      //     rx="3"
-      //     stroke="currentColor"
-      //     strokeWidth="1.4"
-      //   />
-      //   <path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor" />
-      // </>
-    ),
+    // icon: (
+    //   // <>
+    //   //   <rect
+    //   //     x="4"
+    //   //     y="3"
+    //   //     width="16"
+    //   //     height="18"
+    //   //     rx="3"
+    //   //     stroke="currentColor"
+    //   //     strokeWidth="1.4"
+    //   //   />
+    //   //   <path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor" />
+    //   // </>
+    // ),
   },
   // {
   //   category: "branding",
@@ -126,26 +126,26 @@ const PROJECTS = [
     role: "Virtual Assistant",
     tools: "Gmail, Google Workspace",
     result: "Response time cut from 3 days to 24hrs",
-    icon: (
-      // <>
-      //   <rect
-      //     x="3"
-      //     y="5"
-      //     width="18"
-      //     height="14"
-      //     rx="2"
-      //     stroke="currentColor"
-      //     strokeWidth="1.4"
-      //   />
-      //   <path
-      //     d="M3 7l9 6 9-6"
-      //     stroke="currentColor"
-      //     strokeWidth="1.4"
-      //     strokeLinecap="round"
-      //     strokeLinejoin="round"
-      //   />
-      // </>
-    ),
+    // icon: (
+    //   // <>
+    //   //   <rect
+    //   //     x="3"
+    //   //     y="5"
+    //   //     width="18"
+    //   //     height="14"
+    //   //     rx="2"
+    //   //     stroke="currentColor"
+    //   //     strokeWidth="1.4"
+    //   //   />
+    //   //   <path
+    //   //     d="M3 7l9 6 9-6"
+    //   //     stroke="currentColor"
+    //   //     strokeWidth="1.4"
+    //   //     strokeLinecap="round"
+    //   //     strokeLinejoin="round"
+    //   //   />
+    //   // </>
+    // ),
   },
   {
     category: "strategy",
@@ -157,14 +157,14 @@ const PROJECTS = [
     role: "Social Media Strategist",
     tools: "Meta Business Suite, Notion",
     result: "Follower growth +1,200 in Q1",
-    icon: (
-      // <path
-      //   d="M4 19V9M12 19V5M20 19v-7"
-      //   stroke="currentColor"
-      //   strokeWidth="1.6"
-      //   strokeLinecap="round"
-      // />
-    ),
+    // icon: (
+    //   // <path
+    //   //   d="M4 19V9M12 19V5M20 19v-7"
+    //   //   stroke="currentColor"
+    //   //   strokeWidth="1.6"
+    //   //   strokeLinecap="round"
+    //   // />
+    // ),
   },
   // {
   //   category: "social",
