@@ -123,7 +123,7 @@ export default function Showcase() {
           </div>
           <div className="calendar-mock">
             <div className="calendar-mock-head">
-              <strong>March — Sample Client Calendar</strong>
+              <strong>March — Sample Calendar</strong>
               <span>4 posts / week average</span>
             </div>
             <div className="calendar-grid">

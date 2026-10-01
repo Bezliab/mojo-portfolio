@@ -22,19 +22,20 @@ const PROJECTS = [
     tools: "Canva, Instagram Planner",
     result: "+43% profile visits in 60 days",
     icon: (
-      <>
-        <rect
-          x="3"
-          y="3"
-          width="18"
-          height="18"
-          rx="4"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.4" />
-        <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
-      </>
+      <img src="./img/profile.PNG" alt="Deborah Bam's Creation" />
+      // <>
+      //   <rect
+      //     x="3"
+      //     y="3"
+      //     width="18"
+      //     height="18"
+      //     rx="4"
+      //     stroke="currentColor"
+      //     strokeWidth="1.4"
+      //   />
+      //   <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.4" />
+      //   <circle cx="17.2" cy="6.8" r="1" fill="currentColor" />
+      // </>
     ),
   },
   {
@@ -48,23 +49,24 @@ const PROJECTS = [
     tools: "Notion, Google Sheets",
     result: "Increase followers and engagement by 32% in 30 days",
     icon: (
-      <>
-        <rect
-          x="3"
-          y="4"
-          width="18"
-          height="17"
-          rx="2"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <path
-          d="M3 9h18M8 3v3M16 3v3"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-        />
-      </>
+      <img src="./img/calendar.png" alt="Deborah Bam's Creation" />
+      // <>
+      //   <rect
+      //     x="3"
+      //     y="4"
+      //     width="18"
+      //     height="17"
+      //     rx="2"
+      //     stroke="currentColor"
+      //     strokeWidth="1.4"
+      //   />
+      //   <path
+      //     d="M3 9h18M8 3v3M16 3v3"
+      //     stroke="currentColor"
+      //     strokeWidth="1.4"
+      //     strokeLinecap="round"
+      //   />
+      // </>
     ),
   },
   {
@@ -78,18 +80,19 @@ const PROJECTS = [
     tools: "CapCut, Canva",
     result: "4 Reels crossed 5K views",
     icon: (
-      <>
-        <rect
-          x="4"
-          y="3"
-          width="16"
-          height="18"
-          rx="3"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor" />
-      </>
+      <img src="./img/reels.PNG" alt="Deborah Bam's Creation" />
+      // <>
+      //   <rect
+      //     x="4"
+      //     y="3"
+      //     width="16"
+      //     height="18"
+      //     rx="3"
+      //     stroke="currentColor"
+      //     strokeWidth="1.4"
+      //   />
+      //   <path d="M10 9.5l5 2.5-5 2.5v-5z" fill="currentColor" />
+      // </>
     ),
   },
   // {
@@ -122,24 +125,25 @@ const PROJECTS = [
     tools: "Gmail, Google Workspace",
     result: "Response time cut from 3 days to 24hrs",
     icon: (
-      <>
-        <rect
-          x="3"
-          y="5"
-          width="18"
-          height="14"
-          rx="2"
-          stroke="currentColor"
-          strokeWidth="1.4"
-        />
-        <path
-          d="M3 7l9 6 9-6"
-          stroke="currentColor"
-          strokeWidth="1.4"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        />
-      </>
+      <img src="./img/mail.png" alt="Deborah Bam's Creation" />
+      // <>
+      //   <rect
+      //     x="3"
+      //     y="5"
+      //     width="18"
+      //     height="14"
+      //     rx="2"
+      //     stroke="currentColor"
+      //     strokeWidth="1.4"
+      //   />
+      //   <path
+      //     d="M3 7l9 6 9-6"
+      //     stroke="currentColor"
+      //     strokeWidth="1.4"
+      //     strokeLinecap="round"
+      //     strokeLinejoin="round"
+      //   />
+      // </>
     ),
   },
   {
@@ -153,12 +157,13 @@ const PROJECTS = [
     tools: "Meta Business Suite, Notion",
     result: "Follower growth +1,200 in Q1",
     icon: (
-      <path
-        d="M4 19V9M12 19V5M20 19v-7"
-        stroke="currentColor"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-      />
+      <img src="./img/strategy.png" alt="Deborah Bam's Creation" />
+      // <path
+      //   d="M4 19V9M12 19V5M20 19v-7"
+      //   stroke="currentColor"
+      //   strokeWidth="1.6"
+      //   strokeLinecap="round"
+      // />
     ),
   },
   // {
