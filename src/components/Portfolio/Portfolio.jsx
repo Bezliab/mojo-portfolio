@@ -1,5 +1,10 @@
 import { useMemo, useState } from "react";
 import "./Portfolio.css";
+import profile from "./img/profile.PNG";
+import calendar from "./img/calendar.png";
+import reels from "./img/reels.PNG";
+import mail from "./img/mail.png";
+import strategy from "./img/strategy.png";
 
 const FILTERS = [
   { value: "all", label: "All Projects" },
@@ -13,7 +18,7 @@ const FILTERS = [
 const PROJECTS = [
   {
     category: "social",
-    thumb: "thumb-1",
+    thumb: profile,
     catLabel: "Social Media Design",
     title: "Instagram Feed Refresh — [Deborah Bam's Creation]",
     description:
@@ -22,7 +27,6 @@ const PROJECTS = [
     tools: "Canva, Instagram Planner",
     result: "+43% profile visits in 60 days",
     icon: (
-      <img src="./img/profile.PNG" alt="Deborah Bam's Creation" />
       // <>
       //   <rect
       //     x="3"
@@ -40,7 +44,7 @@ const PROJECTS = [
   },
   {
     category: "calendar",
-    thumb: "thumb-2",
+    thumb: "calendar",
     catLabel: "Content Calendar",
     title: "30-Day Launch Calendar — [Deborah Bam's Creation]",
     description:
@@ -49,7 +53,6 @@ const PROJECTS = [
     tools: "Notion, Google Sheets",
     result: "Increase followers and engagement by 32% in 30 days",
     icon: (
-      <img src="./img/calendar.png" alt="Deborah Bam's Creation" />
       // <>
       //   <rect
       //     x="3"
@@ -71,7 +74,7 @@ const PROJECTS = [
   },
   {
     category: "social",
-    thumb: "thumb-3",
+    thumb: reels,
     catLabel: "Reels",
     title: "Reels Series: Behind the Brand — [Deborah Bam's Creation]",
     description:
@@ -80,7 +83,6 @@ const PROJECTS = [
     tools: "CapCut, Canva",
     result: "4 Reels crossed 5K views",
     icon: (
-      <img src="./img/reels.PNG" alt="Deborah Bam's Creation" />
       // <>
       //   <rect
       //     x="4"
@@ -116,7 +118,7 @@ const PROJECTS = [
   // },
   {
     category: "admin",
-    thumb: "thumb-5",
+    thumb: mail,
     catLabel: "Admin & Email",
     title: "Inbox Zero System — [Personal Project]",
     description:
@@ -125,7 +127,6 @@ const PROJECTS = [
     tools: "Gmail, Google Workspace",
     result: "Response time cut from 3 days to 24hrs",
     icon: (
-      <img src="./img/mail.png" alt="Deborah Bam's Creation" />
       // <>
       //   <rect
       //     x="3"
@@ -148,7 +149,7 @@ const PROJECTS = [
   },
   {
     category: "strategy",
-    thumb: "thumb-6",
+    thumb: strategy,
     catLabel: "Strategy",
     title: "Social Growth Strategy — [Deborah Bam's Creation]",
     description:
@@ -157,7 +158,6 @@ const PROJECTS = [
     tools: "Meta Business Suite, Notion",
     result: "Follower growth +1,200 in Q1",
     icon: (
-      <img src="./img/strategy.png" alt="Deborah Bam's Creation" />
       // <path
       //   d="M4 19V9M12 19V5M20 19v-7"
       //   stroke="currentColor"
