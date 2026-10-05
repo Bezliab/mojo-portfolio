@@ -5,10 +5,10 @@ import "./Showcase.css";
 const WEEK_PATTERN = [
   "gold",
   "berry-light",
-  "gold",
+  "pink",
   "ink-soft",
   "berry",
-  "berry-light",
+  "orange",
   null,
 ];
 const DAYS_IN_MOCK_MONTH = 28;
@@ -22,6 +22,8 @@ const LEGEND = [
   { color: "berry-light", label: "Behind-the-Scenes" },
   { color: "berry", label: "Promotional" },
   { color: "ink-soft", label: "Community & Engagement" },
+  { color: "pink", label: "Lifestyle Content" },
+  { color: "orange", label: "Fashion Trends" },
 ];
 
 const PILLARS = [
@@ -48,6 +50,18 @@ const PILLARS = [
     title: "Community & Engagement",
     description:
       "Questions, polls and client wins that invite followers to comment and share.",
+  },
+  {
+    color: "pink",
+    title: "Lifestyle Content",
+    description:
+      "Contents about lifestyle as a fashion designer and fashion academy instructor.",
+  },
+  {
+    color: "orange",
+    title: "Fashion Trends",
+    description:
+      "Contents about fashion trends and why or why not we should follow them.",
   },
 ];
 

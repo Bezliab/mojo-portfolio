@@ -1,10 +1,10 @@
 import { useMemo, useState } from "react";
 import "./Portfolio.css";
-import profile from "./img/profile.PNG";
-import calendar from "./img/calendar.png";
-import reels from "./img/reels.PNG";
-import mail from "./img/mail.png";
-import strategy from "./img/strategy.png";
+import profile from "./img/profile.jpg";
+import calendar from "./img/calendar.jpg";
+import reels from "./img/reels.jpg";
+import mail from "./img/mail.jpg";
+import strategy from "./img/strategy.jpg";
 
 const FILTERS = [
   { value: "all", label: "All Projects" },
@@ -44,7 +44,7 @@ const PROJECTS = [
   },
   {
     category: "calendar",
-    thumb: "calendar",
+    thumb: calendar,
     catLabel: "Content Calendar",
     title: "30-Day Launch Calendar — [Deborah Bam's Creation]",
     description:
@@ -303,11 +303,20 @@ export default function Portfolio() {
                 data-category={project.category}
                 key={project.title}
               >
-                <div className={`portfolio-thumb ${project.thumb}`}>
+                <div className="portfolio-thumb">
                   <span className="portfolio-cat">{project.catLabel}</span>
-                  <svg viewBox="0 0 24 24" fill="none">
-                    {project.icon}
-                  </svg>
+                  {project.thumb ? (
+                    <img
+                      src={project.thumb}
+                      alt={project.title}
+                      className="portfolio-thumb-img"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <svg viewBox="0 0 24 24" fill="none">
+                      {project.icon}
+                    </svg>
+                  )}
                 </div>
                 <div className="portfolio-body">
                   <h3>{project.title}</h3>
