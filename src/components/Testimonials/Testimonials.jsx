@@ -6,14 +6,14 @@ const TESTIMONIALS = [
       "Esther transformed our social media pages from close to stagnancy to interactive and engaging. Our followers are growing, and we are getting more enquiries than ever before.",
     initials: "DBC",
     name: "Deborah Bamigboye",
-    role: "Deborah Bams Creations / CEO",
+    role: "Deborah Bams Fashion Academy / CEO",
   },
   {
     quote:
       "She recently started creating videos for my brand and I must say that I am impressed with her work. She is very creative and has a great eye for detail. I would highly recommend her to anyone looking for a talented video editor.",
     initials: "AI",
     name: "Adeniji Isaac",
-    role: "Bezliab Creative / CEO",
+    role: "Bezliab Creatives / CEO",
   },
   {
     quote:
