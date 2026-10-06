@@ -23,7 +23,7 @@
 .legend-item{ display:flex; align-items:center; gap:8px; font-size:0.82rem; color:var(--ink-soft); }
 .legend-dot{ width:9px; height:9px; border-radius:50%; }
 
-.pillars-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+.pillars-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
 .pillar-card{ background:var(--white); border-radius:var(--radius-md); padding:24px 20px; box-shadow:var(--shadow-card); }
 .pillar-card .pillar-swatch{ width:34px; height:34px; border-radius:9px; margin-bottom:16px; }
 .pillar-card h4{ font-size:1.03rem; margin-bottom:8px; font-family:var(--serif); font-weight:500; }

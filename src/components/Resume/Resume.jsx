@@ -13,11 +13,14 @@ export default function Resume() {
             </p>
           </div>
           <div className="resume-actions">
-            {/* Replace href below with the real CV file path, e.g. "/mojisola-esther-cv.pdf" */}
-            <a href="#" className="btn btn-light" download>
+            <a
+              href="/Esther-Mojisola-CV.pdf"
+              className="btn btn-light"
+              download="Esther-Mojisola-CV.pdf"
+            >
               Download My CV
             </a>
-            <small>PDF · Updated [Month Year]</small>
+            <small>PDF · Updated October 2026</small>
           </div>
         </div>
       </div>

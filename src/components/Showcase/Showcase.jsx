@@ -175,7 +175,7 @@ export default function Showcase() {
         <div className="showcase-block">
           <div className="showcase-block-head">
             <h3>Content Pillars</h3>
-            <p>The four themes every post is planned around</p>
+            <p>The six themes every post is planned around</p>
           </div>
           <div className="pillars-grid">
             {PILLARS.map((pillar) => (
