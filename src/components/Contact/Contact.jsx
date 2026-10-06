@@ -1,27 +1,49 @@
-import { useRef, useState } from 'react';
-import './Contact.css';
+import { useRef, useState } from "react";
+import "./Contact.css";
 
 const CHANNELS = [
   {
-    href: 'mailto:hello@mojisolaesther.com',
-    label: 'Email',
-    value: 'hello@mojisolaesther.com',
+    href: "mailto:esthermojisola38@gmail.com",
+    label: "Email",
+    value: "esthermojisola38@gmail.com",
     external: false,
     icon: (
       <>
-        <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" strokeWidth="1.5" />
-        <path d="M3 7l9 6 9-6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <rect
+          x="3"
+          y="5"
+          width="18"
+          height="14"
+          rx="2"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
+        <path
+          d="M3 7l9 6 9-6"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
       </>
     ),
   },
   {
-    href: 'https://linkedin.com/in/mojisolaesther',
-    label: 'LinkedIn',
-    value: 'linkedin.com/in/mojisolaesther',
+    href: "https://www.linkedin.com/in/mojisola-esther-68360431b?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
+    label: "LinkedIn",
+    value: "linkedin.com/in/mojisolaesther",
     external: true,
     icon: (
       <>
-        <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" strokeWidth="1.5" />
+        <rect
+          x="3"
+          y="3"
+          width="18"
+          height="18"
+          rx="3"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
         <path
           d="M8 10.5v6M8 7.8v.01M12.2 16.5v-3.6c0-1.2.8-2 2-2s1.8.8 1.8 2v3.6"
           stroke="currentColor"
@@ -32,13 +54,21 @@ const CHANNELS = [
     ),
   },
   {
-    href: 'https://instagram.com/mojisolaesther',
-    label: 'Instagram',
-    value: '@mojisolaesther',
+    href: "https://www.instagram.com/liamsstitches?stkn=Z3d5ODByMXVrOHhq&utm_source=qr",
+    label: "Instagram",
+    value: "@mojisolaesther",
     external: true,
     icon: (
       <>
-        <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.5" />
+        <rect
+          x="3"
+          y="3"
+          width="18"
+          height="18"
+          rx="5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+        />
         <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
         <circle cx="17.3" cy="6.7" r="1" fill="currentColor" />
       </>
@@ -47,14 +77,20 @@ const CHANNELS = [
 ];
 
 const SERVICE_OPTIONS = [
-  'Virtual Assistance',
-  'Social Media Management',
-  'Content Creation',
-  'A mix of the above',
-  'Not sure yet',
+  "Virtual Assistance",
+  "Social Media Management",
+  "Content Creation",
+  "A mix of the above",
+  "Not sure yet",
 ];
 
-const INITIAL_FORM = { name: '', email: '', company: '', service: '', message: '' };
+const INITIAL_FORM = {
+  name: "",
+  email: "",
+  company: "",
+  service: "",
+  message: "",
+};
 
 export default function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
@@ -72,7 +108,7 @@ export default function Contact() {
     // to receive real submissions.
     setSubmitted(true);
     setForm(INITIAL_FORM);
-    successRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    successRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   return (
@@ -82,9 +118,9 @@ export default function Contact() {
           <span className="section-tag">Get In Touch</span>
           <h2>Ready to take your business to the next level?</h2>
           <p>
-            Tell me a bit about what you need — whether it's ongoing support, a one-off content
-            project, or full social media management — and I'll get back to you within one
-            business day.
+            Tell me a bit about what you need — whether it's ongoing support, a
+            one-off content project, or full social media management — and I'll
+            get back to you within one business day.
           </p>
           <div className="contact-channels">
             {CHANNELS.map((channel) => (
@@ -92,8 +128,8 @@ export default function Contact() {
                 key={channel.label}
                 href={channel.href}
                 className="contact-channel"
-                target={channel.external ? '_blank' : undefined}
-                rel={channel.external ? 'noopener' : undefined}
+                target={channel.external ? "_blank" : undefined}
+                rel={channel.external ? "noopener" : undefined}
               >
                 <span className="ci">
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -110,12 +146,28 @@ export default function Contact() {
         </div>
 
         <form className="contact-form" onSubmit={handleSubmit}>
-          <div className={`form-success${submitted ? ' show' : ''}`} ref={successRef}>
+          <div
+            className={`form-success${submitted ? " show" : ""}`}
+            ref={successRef}
+          >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="9.5" stroke="currentColor" strokeWidth="1.5" />
-              <path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              <circle
+                cx="12"
+                cy="12"
+                r="9.5"
+                stroke="currentColor"
+                strokeWidth="1.5"
+              />
+              <path
+                d="M8 12.5l2.5 2.5L16 9.5"
+                stroke="currentColor"
+                strokeWidth="1.6"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
             </svg>
-            Thanks — your message has been noted. I'll be in touch within one business day.
+            Thanks — your message has been noted. I'll be in touch within one
+            business day.
           </div>
           <div className="form-row">
             <div className="field">
@@ -156,7 +208,12 @@ export default function Contact() {
           </div>
           <div className="field">
             <label htmlFor="service">Service Needed</label>
-            <select id="service" name="service" value={form.service} onChange={handleChange}>
+            <select
+              id="service"
+              name="service"
+              value={form.service}
+              onChange={handleChange}
+            >
               <option value="">Select a service</option>
               {SERVICE_OPTIONS.map((option) => (
                 <option value={option} key={option}>
@@ -180,8 +237,8 @@ export default function Contact() {
             Let's Work Together
           </button>
           <p className="form-note">
-            This form is a front-end demo — connect it to your email service or form handler to
-            receive real submissions.
+            This form is a front-end demo — connect it to your email service or
+            form handler to receive real submissions.
           </p>
         </form>
       </div>

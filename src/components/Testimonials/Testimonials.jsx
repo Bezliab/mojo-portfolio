@@ -1,26 +1,26 @@
-import './Testimonials.css';
+import "./Testimonials.css";
 
 const TESTIMONIALS = [
   {
     quote:
-      "Mojisola took over our social media completely and I finally stopped worrying about it. Our page looks professional and consistent, and I get more enquiries through Instagram than I ever did before.",
-    initials: 'CN',
-    name: '[Client Name]',
-    role: '[Business Name / Role]',
+      "Esther transformed our social media pages from close to stagnancy to interactive and engaging. Our followers are growing, and we are getting more enquiries than ever before.",
+    initials: "DBC",
+    name: "Deborah Bamigboye",
+    role: "Deborah Bams Creations / CEO",
   },
   {
     quote:
-      "What stands out most is how organised she is. Deadlines are never missed, communication is clear, and I never have to follow up twice. It genuinely feels like having a full team member.",
-    initials: 'CN',
-    name: '[Client Name]',
-    role: '[Business Name / Role]',
+      "She recently started creating videos for my brand and I must say that I am impressed with her work. She is very creative and has a great eye for detail. I would highly recommend her to anyone looking for a talented video editor.",
+    initials: "AI",
+    name: "Adeniji Isaac",
+    role: "Bezliab Creative / CEO",
   },
   {
     quote:
-      "She brought so much clarity to our content — from the calendar to the captions to the actual strategy behind it. Our engagement has grown steadily every month since we started working together.",
-    initials: 'CN',
-    name: '[Client Name]',
-    role: '[Business Name / Role]',
+      "Her organization and planning skills are top-notch. She is always on top of deadlines and ensures that everything runs smoothly. I would highly recommend her to anyone looking for a reliable and efficient executive assistant.",
+    initials: "DBC",
+    name: "Deborah Bamigboye",
+    role: "Deborah Bams Creations / CEO",
   },
 ];
 
@@ -31,7 +31,6 @@ export default function Testimonials() {
         <div className="section-head">
           <span className="section-tag">Kind Words</span>
           <h2>What clients say about working together.</h2>
-          <p>Placeholder testimonials below — ready to be swapped for genuine client or employer reviews.</p>
         </div>
         <div className="testimonial-scroller">
           {TESTIMONIALS.map((testimonial, index) => (
@@ -45,7 +44,9 @@ export default function Testimonials() {
                   <span>{testimonial.role}</span>
                 </div>
               </div>
-              <p className="placeholder-note">Placeholder testimonial — replace with a real review</p>
+              {/* <p className="placeholder-note">
+                Placeholder testimonial — replace with a real review
+              </p> */}
             </div>
           ))}
         </div>
