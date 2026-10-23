@@ -236,10 +236,6 @@ export default function Contact() {
           <button type="submit" className="btn btn-primary btn-block">
             Let's Work Together
           </button>
-          <p className="form-note">
-            This form is a front-end demo — connect it to your email service or
-            form handler to receive real submissions.
-          </p>
         </form>
       </div>
     </section>

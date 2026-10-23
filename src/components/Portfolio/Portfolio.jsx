@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./Portfolio.css";
 import profile from "./img/profile.jpg";
 import calendar from "./img/calendar.jpg";
@@ -256,8 +256,24 @@ const PROJECTS = [
   // },
 ];
 
+// TODO: replace with the real link to the video editing portfolio
+const VIDEO_PORTFOLIO_URL = "https://example.com/video-portfolio";
+
 export default function Portfolio() {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [lightbox, setLightbox] = useState(null);
+
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e) => e.key === "Escape" && setLightbox(null);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [lightbox]);
 
   const visibleProjects = useMemo(
     () =>
@@ -303,7 +319,21 @@ export default function Portfolio() {
                 data-category={project.category}
                 key={project.title}
               >
-                <div className="portfolio-thumb">
+                <div
+                  className={`portfolio-thumb${project.thumb ? " zoomable" : ""}`}
+                  {...(project.thumb && {
+                    role: "button",
+                    tabIndex: 0,
+                    "aria-label": `View full image: ${project.title}`,
+                    onClick: () => setLightbox(project),
+                    onKeyDown: (e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setLightbox(project);
+                      }
+                    },
+                  })}
+                >
                   <span className="portfolio-cat">{project.catLabel}</span>
                   {project.thumb ? (
                     <img
@@ -335,7 +365,44 @@ export default function Portfolio() {
             );
           })}
         </div>
+
+        <div className="portfolio-cta">
+          <a
+            className="btn btn-primary"
+            href="https://drive.google.com/drive/folders/1Ic96vgECaDGPAOVpPy3j_MZxRpBP5N_5"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View my Video Editing Portfolio →
+          </a>
+        </div>
       </div>
+
+      {lightbox && (
+        <div
+          className="lightbox"
+          role="dialog"
+          aria-modal="true"
+          aria-label={lightbox.title}
+          onClick={() => setLightbox(null)}
+        >
+          <button
+            type="button"
+            className="lightbox-close"
+            aria-label="Close image"
+            onClick={() => setLightbox(null)}
+            autoFocus
+          >
+            ×
+          </button>
+          <img
+            src={lightbox.thumb}
+            alt={lightbox.title}
+            className="lightbox-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </section>
   );
 }
