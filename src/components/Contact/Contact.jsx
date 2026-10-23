@@ -84,6 +84,12 @@ const SERVICE_OPTIONS = [
   "Not sure yet",
 ];
 
+// Submissions are delivered to this inbox via FormSubmit (https://formsubmit.co).
+// First-time setup: after the first message is sent, FormSubmit emails an
+// activation link to this address. Click it once and all later messages arrive.
+const RECIPIENT_EMAIL = "esthermojisola38@gmail.com";
+const FORM_ENDPOINT = `https://formsubmit.co/ajax/${RECIPIENT_EMAIL}`;
+
 const INITIAL_FORM = {
   name: "",
   email: "",
@@ -95,6 +101,8 @@ const INITIAL_FORM = {
 export default function Contact() {
   const [form, setForm] = useState(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState("");
   const successRef = useRef(null);
 
   const handleChange = (event) => {
@@ -102,13 +110,50 @@ export default function Contact() {
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Front-end demo only — connect this to your email service or form handler
-    // to receive real submissions.
-    setSubmitted(true);
-    setForm(INITIAL_FORM);
-    successRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (sending) return;
+    // Honeypot: real visitors never fill this hidden field.
+    if (event.target.elements._honey?.value) return;
+
+    setSending(true);
+    setError("");
+    setSubmitted(false);
+    try {
+      const response = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: `New enquiry from ${form.name} — Portfolio website`,
+          _template: "table",
+          _replyto: form.email,
+          Name: form.name,
+          Email: form.email,
+          Company: form.company || "—",
+          "Service Needed": form.service || "—",
+          Message: form.message,
+        }),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok || data.success === "false" || data.success === false) {
+        throw new Error(data.message || "Request failed");
+      }
+      setSubmitted(true);
+      setForm(INITIAL_FORM);
+      successRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    } catch {
+      setError(
+        `Sorry, your message couldn't be sent. Please try again or email ${RECIPIENT_EMAIL} directly.`,
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -166,9 +211,22 @@ export default function Contact() {
                 strokeLinejoin="round"
               />
             </svg>
-            Thanks — your message has been noted. I'll be in touch within one
+            Thanks — your message has been sent. I'll be in touch within one
             business day.
           </div>
+          {error && (
+            <div className="form-error" role="alert">
+              {error}
+            </div>
+          )}
+          <input
+            type="text"
+            name="_honey"
+            tabIndex={-1}
+            autoComplete="off"
+            aria-hidden="true"
+            style={{ display: "none" }}
+          />
           <div className="form-row">
             <div className="field">
               <label htmlFor="name">Name</label>
@@ -233,8 +291,12 @@ export default function Contact() {
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn btn-primary btn-block">
-            Let's Work Together
+          <button
+            type="submit"
+            className="btn btn-primary btn-block"
+            disabled={sending}
+          >
+            {sending ? "Sending…" : "Let's Work Together"}
           </button>
         </form>
       </div>
