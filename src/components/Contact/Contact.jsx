@@ -54,7 +54,7 @@ const CHANNELS = [
     ),
   },
   {
-    href: "https://www.instagram.com/liamsstitches?stkn=Z3d5ODByMXVrOHhq&utm_source=qr",
+    href: "https://www.instagram.com/liamsfit.mojovisuals22?srtk=Z3d5ODByMXVrOHhq&utm_source=qr",
     label: "Instagram",
     value: "@mojisolaesther",
     external: true,
