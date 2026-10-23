@@ -31,7 +31,7 @@ export default function Footer() {
             </p>
             <div className="footer-social" style={{ marginTop: 22 }}>
               <a
-                href="https://www.instagram.com/liamsstitches?stkn=Z3d5ODByMXVrOHhq&utm_source=qr"
+                href="https://www.instagram.com/liamsfit.mojovisuals22?srtk=Z3d5ODByMXVrOHhq&utm_source=qr"
                 target="_blank"
                 rel="noopener"
                 aria-label="Instagram"
